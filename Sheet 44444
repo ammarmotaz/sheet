@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+class Node{
+
+public:
+char data;
+Node*next;
+ char printlist(Node*n)
+{
+while(n!=NULL)
+{
+ cout<<n->data;
+ n=n->next;
+}
+
+}
+} ;
+
+
+
+int main()
+{
+Node n;
+Node*head=NULL;
+Node*second=NULL;
+Node*third=NULL;
+Node*fourth=NULL;
+Node*fifth=new Node();
+head=new Node();
+second=new Node();
+third=new Node();
+fourth=new Node();
+head->data='a';
+head->next=second;
+second->data='m';
+second->next=third;
+third->data='m';
+third->next=fourth;
+fourth->data='a';
+fourth->next=fifth;
+fifth->data='r';
+fifth->next=NULL;
+n.printlist(head);
+
+}
